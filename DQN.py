@@ -82,7 +82,7 @@ for e in range(n_episodes):
     while not done:  
         action = actions(state) 
         next_state, reward, done= env.step(action)        
-        reward = reward if not done else -10 
+        reward = reward if not done 
         agent.remember(state, action, reward, next_state, done)       
         state = next_state       
         if done: 
